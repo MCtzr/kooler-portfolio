@@ -28,7 +28,7 @@ jobs:
         run: ng build --configuration=production --base-href=/kooler-portfolio/
 
       - name: Move files to root
-        run: mv dist/kooler-portfolio/* .
+        run: mv ./* .
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
