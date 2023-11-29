@@ -27,13 +27,11 @@ jobs:
       - name: Build Angular App
         run: ng build --configuration=production --base-href=/kooler-portfolio/ --output-path=dist/kooler-portfolio/
 
-      - name: Copy files to docs
-        run: |
-          mkdir docs
-          cp -r dist/kooler-portfolio/* docs/
+      - name: Move files to root
+        run: mv dist/kooler-portfolio/* .
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.PORTFOLIO_TOKEN }}
-          publish_dir: ./docs
+          publish_dir: .  # Le répertoire racine est spécifié ici
