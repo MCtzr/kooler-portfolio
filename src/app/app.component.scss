@@ -15,7 +15,7 @@
 }
 
 .banniereTitle {
-    z-index: 1;
+    z-index: 2;
     position: sticky;
     background-color: white;
     top: 0px;
@@ -53,7 +53,7 @@
     float: left;
     margin-left: 15%;
     display: grid;
-    grid-template-columns: 19% 15% 19%;
+    grid-template-columns: 24% 15% 24%;
     grid-auto-rows: max-content;
     grid-column-gap: 1vw;
     column-gap: 1vw;
@@ -80,7 +80,7 @@
 }
 
 .vertical-text {
-    z-index: 0;
+    z-index: 1;
     background-color: white;
     position: relative;
     float: right;
@@ -98,7 +98,7 @@
     white-space: nowrap;
 }
 
-.credits a {
+.banniereTitle a {
     text-decoration: none;
     background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
     -webkit-background-clip: text;
