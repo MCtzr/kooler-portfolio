@@ -28,7 +28,9 @@ jobs:
         run: ng build --configuration=production --base-href=/kooler-portfolio/ --output-path=dist/kooler-portfolio/
 
       - name: Copy files to docs
-        run: cp -r dist/kooler-portfolio/* docs/
+        run: |
+          mkdir docs
+          cp -r dist/kooler-portfolio/* docs/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
