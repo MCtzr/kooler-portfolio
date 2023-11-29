@@ -27,9 +27,6 @@ jobs:
       - name: Build Angular App
         run: ng build --configuration=production --base-href=/kooler-portfolio/
 
-      - name: Move files to root
-        run: mv ./* .
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
